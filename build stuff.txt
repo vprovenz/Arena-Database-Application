@@ -1,0 +1,2 @@
+javac -d bin -sourcepath src -cp lib/ojdbc8.jar src/JDBCConnection.java
+java -cp bin;lib/ojdbc8.jar JDBCConnection

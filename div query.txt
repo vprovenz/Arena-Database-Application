@@ -1,0 +1,8 @@
+SELECT SponsorID FROM Sponsor s
+WHERE NOT EXISTS (
+(SELECT eventID FROM Sport WHERE hometeamID = 1849 )
+MINUS
+(SELECT eventID FROM SponsorsSportingEvent WHERE  sponsorID = s.sponsorID) );
+
+
+DELETE FROM sponsorssportingevent WHERE sponsorid = 302819 AND eventid = 940275;
